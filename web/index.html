@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Xbox 360 Controller</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; }
+    button {
+      margin: 5px;
+      padding: 15px;
+      font-size: 16px;
+      width: 80px;
+      height: 80px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Xbox 360 Controller</h1>
+
+  <div>
+    <button onclick="send('DPAD_UP')">↑</button>
+    <button onclick="send('DPAD_LEFT')">←</button>
+    <button onclick="send('DPAD_RIGHT')">→</button>
+    <button onclick="send('DPAD_DOWN')">↓</button>
+  </div>
+
+  <div>
+    <button onclick="send('A')">A</button>
+    <button onclick="send('B')">B</button>
+    <button onclick="send('X')">X</button>
+    <button onclick="send('Y')">Y</button>
+  </div>
+
+  <div>
+    <button onclick="send('LB')">LB</button>
+    <button onclick="send('RB')">RB</button>
+    <button onclick="send('LT')">LT</button>
+    <button onclick="send('RT')">RT</button>
+  </div>
+
+  <div>
+    <button onclick="send('START')">Start</button>
+    <button onclick="send('BACK')">Back</button>
+    <button onclick="send('GUIDE')">Guide</button>
+  </div>
+
+  <div>
+    <button onclick="send('L_THUMB')">L<br>Stick</button>
+    <button onclick="send('R_THUMB')">R<br>Stick</button>
+  </div>
+
+  <script>
+    function send(btn) {
+      fetch("/btn?code=" + btn)
+        .then(response => response.text())
+        .then(data => console.log(data));
+    }
+  </script>
+</body>
+</html>

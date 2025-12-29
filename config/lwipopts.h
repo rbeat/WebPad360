@@ -1,0 +1,24 @@
+#pragma once
+
+#define NO_SYS 1
+#define LWIP_TIMEVAL_PRIVATE 1
+#define LWIP_NETCONN 0
+#define LWIP_SOCKET 0
+#define LWIP_HTTPD 1
+#define LWIP_HTTPD_CGI 1
+#define LWIP_HTTPD_SSI 0
+#define LWIP_HTTPD_CUSTOM_FILES 1
+#define LWIP_IPV4 1
+#define LWIP_IPV6 0
+#define LWIP_NETIF_HOSTNAME 1
+#define LWIP_NETIF_STATUS_CALLBACK 1
+#define MEM_ALIGNMENT 4
+#define MEM_SIZE 1600
+#define LWIP_TCP 1
+#define TCP_TTL 255
+#define TCP_QUEUE_OOSEQ 0
+#define TCP_MSS 1024
+#define TCP_SND_BUF (2 * TCP_MSS)
+#define TCP_WND (2 * TCP_MSS)
+#define LWIP_STATS 0
+#define LWIP_PROVIDE_ERRNO 1

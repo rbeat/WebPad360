@@ -16,8 +16,7 @@ This project turns a Raspberry Pi Pico W into a Wi-Fi controlled, Xbox 360 (XInp
 ## Known Issues/Bugs
 
 - Only static IP address for now (for some reason, can't get DHCP to work)
-- No sticks for now
-- Simple web UI/UX (to serve as a protoype)
+- No sticks for now (only stick press)
 
 ## Prerequisites
 

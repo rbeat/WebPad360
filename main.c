@@ -113,6 +113,8 @@ const char* cgi_btn_handler(int iIndex, int iNumParams, char *pcParam[], char *p
     else if (strcmp(btn, "RB") == 0)     gamepad.wButtons |= XINPUT_GAMEPAD_RIGHT_SHOULDER;
     else if (strcmp(btn, "L_THUMB") == 0)gamepad.wButtons |= XINPUT_GAMEPAD_LEFT_THUMB;
     else if (strcmp(btn, "R_THUMB") == 0)gamepad.wButtons |= XINPUT_GAMEPAD_RIGHT_THUMB;
+    else if (strcmp(btn, "LT") == 0)     gamepad.bLeftTrigger = 255;
+    else if (strcmp(btn, "RT") == 0)     gamepad.bRightTrigger = 255;
     else if (strcmp(btn, "DPAD_UP") == 0)gamepad.wButtons |= XINPUT_GAMEPAD_DPAD_UP;
     else if (strcmp(btn, "DPAD_DOWN") == 0)gamepad.wButtons |= XINPUT_GAMEPAD_DPAD_DOWN;
     else if (strcmp(btn, "DPAD_LEFT") == 0)gamepad.wButtons |= XINPUT_GAMEPAD_DPAD_LEFT;
